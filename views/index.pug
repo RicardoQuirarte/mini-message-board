@@ -2,4 +2,11 @@ extends layout
 
 block content
   h1= title
-  p Welcome to #{title}
+
+  for msg in messages
+    div(class='box')
+      p= msg.text
+      p= msg.user
+      p= msg.added
+
+  a(href='http://localhost:3000/new') New message

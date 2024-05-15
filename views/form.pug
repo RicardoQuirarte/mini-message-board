@@ -1,0 +1,13 @@
+extends layout
+
+block content
+    h1 Write your new message
+    form(method="POST" action="/new")
+            div(class='input') 
+                label(for="name") Name
+                input(type="text" id='name' name= "name")
+            div(class='input')
+                 label(for="message") Message
+                 input(type="text-area" id='message' name= "message") 
+            button Send
+    form
